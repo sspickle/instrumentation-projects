@@ -1,0 +1,395 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date "lun. 30 mars 2015"
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text Label 1650 2050 1    60   ~ 0
+Vin
+Text Label 2050 2050 1    60   ~ 0
+IOREF
+Text Label 1600 3100 0    60   ~ 0
+A0
+Text Label 1600 3200 0    60   ~ 0
+A1
+Text Label 1600 3300 0    60   ~ 0
+A2
+Text Label 1600 3400 0    60   ~ 0
+A3
+Text Label 1600 3500 0    60   ~ 0
+A4(SDA)
+Text Label 1600 3600 0    60   ~ 0
+A5(SCL)
+Text Label 3250 3600 0    60   ~ 0
+0(Rx)
+Text Label 3250 3400 0    60   ~ 0
+2
+Text Label 3250 3500 0    60   ~ 0
+1(Tx)
+Text Label 3250 3300 0    60   ~ 0
+3(**)
+Text Label 3250 3200 0    60   ~ 0
+4
+Text Label 3250 3100 0    60   ~ 0
+5(**)
+Text Label 3250 3000 0    60   ~ 0
+6(**)
+Text Label 3250 2900 0    60   ~ 0
+7
+Text Label 3250 2700 0    60   ~ 0
+8
+Text Label 3250 2600 0    60   ~ 0
+9(**)
+Text Label 3250 2500 0    60   ~ 0
+10(**/SS)
+Text Label 3250 2400 0    60   ~ 0
+11(**/MOSI)
+Text Label 3250 2300 0    60   ~ 0
+12(MISO)
+Text Label 3250 2200 0    60   ~ 0
+13(SCK)
+Text Label 3250 2000 0    60   ~ 0
+AREF
+NoConn ~ 2100 2200
+Text Label 3250 1900 0    60   ~ 0
+A4(SDA)
+Text Label 3250 1800 0    60   ~ 0
+A5(SCL)
+$Comp
+L Conn_01x08 P1
+U 1 1 56D70129
+P 2300 2550
+F 0 "P1" H 2300 3000 50  0000 C CNN
+F 1 "Power" V 2400 2550 50  0000 C CNN
+F 2 "Socket_Arduino_Uno:Socket_Strip_Arduino_1x08" V 2450 2550 20  0000 C CNN
+F 3 "" H 2300 2550 50  0000 C CNN
+	1    2300 2550
+	1    0    0    -1  
+$EndComp
+Text Label 1350 2400 0    60   ~ 0
+Reset
+$Comp
+L +3.3V #PWR3
+U 1 1 56D70538
+P 1850 2050
+F 0 "#PWR3" H 1850 1900 50  0001 C CNN
+F 1 "+3.3V" H 1850 2190 50  0000 C CNN
+F 2 "" H 1850 2050 50  0000 C CNN
+F 3 "" H 1850 2050 50  0000 C CNN
+	1    1850 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR2
+U 1 1 56D707BB
+P 1750 1950
+F 0 "#PWR2" H 1750 1800 50  0001 C CNN
+F 1 "+5V" H 1750 2090 50  0000 C CNN
+F 2 "" H 1750 1950 50  0000 C CNN
+F 3 "" H 1750 1950 50  0000 C CNN
+	1    1750 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR4
+U 1 1 56D70CC2
+P 2000 3750
+F 0 "#PWR4" H 2000 3500 50  0001 C CNN
+F 1 "GND" H 2000 3600 50  0000 C CNN
+F 2 "" H 2000 3750 50  0000 C CNN
+F 3 "" H 2000 3750 50  0000 C CNN
+	1    2000 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR5
+U 1 1 56D70CFF
+P 3000 3750
+F 0 "#PWR5" H 3000 3500 50  0001 C CNN
+F 1 "GND" H 3000 3600 50  0000 C CNN
+F 2 "" H 3000 3750 50  0000 C CNN
+F 3 "" H 3000 3750 50  0000 C CNN
+	1    3000 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Conn_01x06 P2
+U 1 1 56D70DD8
+P 2300 3350
+F 0 "P2" H 2300 3700 50  0000 C CNN
+F 1 "Analog" V 2400 3350 50  0000 C CNN
+F 2 "Socket_Arduino_Uno:Socket_Strip_Arduino_1x06" V 2450 3400 20  0000 C CNN
+F 3 "" H 2300 3350 50  0000 C CNN
+	1    2300 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Conn_01x08 P4
+U 1 1 56D7164F
+P 2700 3250
+F 0 "P4" H 2700 3700 50  0000 C CNN
+F 1 "Digital" V 2800 3250 50  0000 C CNN
+F 2 "Socket_Arduino_Uno:Socket_Strip_Arduino_1x08" V 2850 3200 20  0000 C CNN
+F 3 "" H 2700 3250 50  0000 C CNN
+	1    2700 3250
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Conn_01x10 P3
+U 1 1 56D721E0
+P 2700 2250
+F 0 "P3" H 2700 2800 50  0000 C CNN
+F 1 "Digital" V 2800 2250 50  0000 C CNN
+F 2 "Socket_Arduino_Uno:Socket_Strip_Arduino_1x10" V 2850 2250 20  0000 C CNN
+F 3 "" H 2700 2250 50  0000 C CNN
+	1    2700 2250
+	-1   0    0    -1  
+$EndComp
+Text Notes 2400 2200 0    60   ~ 0
+1
+$Comp
+L R R1
+U 1 1 5A5D2755
+P 4800 2000
+F 0 "R1" V 4880 2000 50  0000 C CNN
+F 1 "6.8k" V 4800 2000 50  0000 C CNN
+F 2 "" V 4730 2000 50  0001 C CNN
+F 3 "" H 4800 2000 50  0001 C CNN
+	1    4800 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C1
+U 1 1 5A5D27B3
+P 4800 2600
+F 0 "C1" H 4825 2700 50  0000 L CNN
+F 1 "20u" H 4825 2500 50  0000 L CNN
+F 2 "" H 4838 2450 50  0001 C CNN
+F 3 "" H 4800 2600 50  0001 C CNN
+	1    4800 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR1
+U 1 1 5A5D2BD9
+P 4800 3550
+F 0 "#PWR1" H 4800 3300 50  0001 C CNN
+F 1 "GND" H 4800 3400 50  0000 C CNN
+F 2 "" H 4800 3550 50  0001 C CNN
+F 3 "" H 4800 3550 50  0001 C CNN
+	1    4800 3550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2050 2050 2050 2300
+Wire Wire Line
+	2050 2300 2100 2300
+Wire Wire Line
+	2100 2500 1850 2500
+Wire Wire Line
+	2100 2600 1750 2600
+Wire Wire Line
+	2100 2900 1650 2900
+Wire Wire Line
+	2100 2700 2000 2700
+Wire Wire Line
+	2100 2800 2000 2800
+Connection ~ 2000 2800
+Wire Wire Line
+	1650 2900 1650 2050
+Wire Wire Line
+	1750 2600 1750 1950
+Wire Wire Line
+	1850 2500 1850 2050
+Wire Wire Line
+	2100 3300 1600 3300
+Wire Wire Line
+	2100 3400 1600 3400
+Wire Wire Line
+	2100 3500 1600 3500
+Wire Wire Line
+	2100 3600 1600 3600
+Wire Wire Line
+	2900 2700 3250 2700
+Wire Wire Line
+	2900 2600 3250 2600
+Wire Wire Line
+	2900 2500 3250 2500
+Wire Wire Line
+	2900 2400 3250 2400
+Wire Wire Line
+	2900 2300 3250 2300
+Wire Wire Line
+	2900 2200 3250 2200
+Wire Wire Line
+	2900 2000 3250 2000
+Wire Wire Line
+	2900 1900 3250 1900
+Wire Wire Line
+	2900 1800 3250 1800
+Wire Wire Line
+	2900 3600 3250 3600
+Wire Wire Line
+	2900 3500 3250 3500
+Wire Wire Line
+	2900 3400 3250 3400
+Wire Wire Line
+	2900 3200 3250 3200
+Wire Wire Line
+	2900 3100 3250 3100
+Wire Wire Line
+	2900 3000 3250 3000
+Wire Wire Line
+	2900 2900 3250 2900
+Wire Wire Line
+	2900 2100 3000 2100
+Wire Wire Line
+	3000 2100 3000 3750
+Wire Wire Line
+	2000 2700 2000 3750
+Wire Wire Line
+	2100 2400 1350 2400
+Wire Wire Line
+	4800 2750 4800 3550
+Wire Wire Line
+	4800 2150 4800 2450
+Connection ~ 4800 3450
+Wire Wire Line
+	2900 3300 4100 3300
+Wire Wire Line
+	4100 3300 4100 1600
+Wire Wire Line
+	4100 1600 4800 1600
+Wire Wire Line
+	4800 1600 4800 1850
+Wire Wire Line
+	2100 3200 1600 3200
+Wire Wire Line
+	2100 3100 1600 3100
+$Comp
+L LM324 U1
+U 1 1 5A6C62E5
+P 5800 2400
+F 0 "U1" H 5800 2600 50  0000 L CNN
+F 1 "LM324" H 5800 2200 50  0000 L CNN
+F 2 "" H 5750 2500 50  0001 C CNN
+F 3 "" H 5850 2600 50  0001 C CNN
+	1    5800 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4800 2300 5500 2300
+Connection ~ 4800 2300
+$Comp
+L R R3
+U 1 1 5A6C63BE
+P 6400 2650
+F 0 "R3" V 6480 2650 50  0000 C CNN
+F 1 "?" V 6400 2650 50  0000 C CNN
+F 2 "" V 6330 2650 50  0001 C CNN
+F 3 "" H 6400 2650 50  0001 C CNN
+	1    6400 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R2
+U 1 1 5A6C6403
+P 6400 3200
+F 0 "R2" V 6480 3200 50  0000 C CNN
+F 1 "?" V 6400 3200 50  0000 C CNN
+F 2 "" V 6330 3200 50  0001 C CNN
+F 3 "" H 6400 3200 50  0001 C CNN
+	1    6400 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR?
+U 1 1 5A6C644F
+P 5700 1800
+F 0 "#PWR?" H 5700 1650 50  0001 C CNN
+F 1 "+5V" H 5700 1940 50  0000 C CNN
+F 2 "" H 5700 1800 50  0001 C CNN
+F 3 "" H 5700 1800 50  0001 C CNN
+	1    5700 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6100 2400 6400 2400
+Wire Wire Line
+	6400 2400 6400 2500
+Wire Wire Line
+	6400 2800 6400 3050
+Wire Wire Line
+	5500 2500 5300 2500
+Wire Wire Line
+	5300 2500 5300 2900
+Wire Wire Line
+	5300 2900 6400 2900
+Connection ~ 6400 2900
+$Comp
+L GND #PWR?
+U 1 1 5A6C653C
+P 6400 3600
+F 0 "#PWR?" H 6400 3350 50  0001 C CNN
+F 1 "GND" H 6400 3450 50  0000 C CNN
+F 2 "" H 6400 3600 50  0001 C CNN
+F 3 "" H 6400 3600 50  0001 C CNN
+	1    6400 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5A6C656B
+P 5700 2750
+F 0 "#PWR?" H 5700 2500 50  0001 C CNN
+F 1 "GND" H 5550 2700 50  0000 C CNN
+F 2 "" H 5700 2750 50  0001 C CNN
+F 3 "" H 5700 2750 50  0001 C CNN
+	1    5700 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5700 2100 5700 1800
+Wire Wire Line
+	5700 2750 5700 2700
+Wire Wire Line
+	6400 3350 6400 3600
+$EndSCHEMATC
