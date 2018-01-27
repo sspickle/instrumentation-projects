@@ -102,5 +102,4 @@ ENV/
 .DS_Store
 *~
 *.lib
-*.pro
 *.bak
