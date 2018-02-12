@@ -1,0 +1,166 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L R R1
+U 1 1 5A80E6BE
+P 3000 2100
+F 0 "R1" V 3080 2100 50  0000 C CNN
+F 1 "?" V 3000 2100 50  0000 C CNN
+F 2 "" V 2930 2100 50  0001 C CNN
+F 3 "" H 3000 2100 50  0001 C CNN
+	1    3000 2100
+	0    1    1    0   
+$EndComp
+$Comp
+L C C1
+U 1 1 5A80E6F7
+P 3450 2400
+F 0 "C1" H 3475 2500 50  0000 L CNN
+F 1 "?" H 3475 2300 50  0000 L CNN
+F 2 "" H 3488 2250 50  0001 C CNN
+F 3 "" H 3450 2400 50  0001 C CNN
+	1    3450 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L LM324 U1
+U 1 1 5A80E728
+P 4250 2200
+F 0 "U1" H 4250 2400 50  0000 L CNN
+F 1 "LM324" H 4250 2000 50  0000 L CNN
+F 2 "" H 4200 2300 50  0001 C CNN
+F 3 "" H 4300 2400 50  0001 C CNN
+	1    4250 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 5A80E75E
+P 4150 2700
+F 0 "#PWR?" H 4150 2450 50  0001 C CNN
+F 1 "GND" H 4150 2550 50  0000 C CNN
+F 2 "" H 4150 2700 50  0001 C CNN
+F 3 "" H 4150 2700 50  0001 C CNN
+	1    4150 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L +5V #PWR?
+U 1 1 5A80E77B
+P 4150 1700
+F 0 "#PWR?" H 4150 1550 50  0001 C CNN
+F 1 "+5V" H 4150 1840 50  0000 C CNN
+F 2 "" H 4150 1700 50  0001 C CNN
+F 3 "" H 4150 1700 50  0001 C CNN
+	1    4150 1700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4150 1900 4150 1700
+Wire Wire Line
+	3950 2100 3150 2100
+Wire Wire Line
+	3450 2250 3450 2100
+Connection ~ 3450 2100
+Wire Wire Line
+	4150 2500 4150 2700
+Wire Wire Line
+	3450 2550 3450 2650
+Wire Wire Line
+	3450 2650 4150 2650
+Connection ~ 4150 2650
+Text GLabel 2500 2100 0    60   Input ~ 0
+Vin
+Wire Wire Line
+	2500 2100 2850 2100
+$Comp
+L R R2
+U 1 1 5A80E7D7
+P 5000 2500
+F 0 "R2" V 5080 2500 50  0000 C CNN
+F 1 "?" V 5000 2500 50  0000 C CNN
+F 2 "" V 4930 2500 50  0001 C CNN
+F 3 "" H 5000 2500 50  0001 C CNN
+	1    5000 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R3
+U 1 1 5A80E807
+P 5000 3300
+F 0 "R3" V 5080 3300 50  0000 C CNN
+F 1 "?" V 5000 3300 50  0000 C CNN
+F 2 "" V 4930 3300 50  0001 C CNN
+F 3 "" H 5000 3300 50  0001 C CNN
+	1    5000 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4550 2200 5000 2200
+Wire Wire Line
+	5000 2200 5000 2350
+$Comp
+L GND #PWR?
+U 1 1 5A80E8EF
+P 5000 3650
+F 0 "#PWR?" H 5000 3400 50  0001 C CNN
+F 1 "GND" H 5000 3500 50  0000 C CNN
+F 2 "" H 5000 3650 50  0001 C CNN
+F 3 "" H 5000 3650 50  0001 C CNN
+	1    5000 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5000 3650 5000 3450
+Wire Wire Line
+	5000 2650 5000 3150
+Wire Wire Line
+	3950 2300 3850 2300
+Wire Wire Line
+	3850 2300 3850 3000
+Wire Wire Line
+	3850 3000 5000 3000
+Connection ~ 5000 3000
+$EndSCHEMATC
