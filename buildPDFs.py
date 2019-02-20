@@ -11,8 +11,12 @@ else:
     paths=[os.curdir]
 
 files = []
+skiprubric = False
 
 for path in paths:
+    if path.startswith('--skip'):
+        skiprubric = True
+        continue
     if os.path.isdir(path):
         files += glob.glob(os.path.join(path,'*.ipynb'))
     elif os.path.isfile(path):
@@ -32,12 +36,16 @@ for fname in files:
         print("executing:", cmd)
         result = os.system(cmd)
         if not result:
-            cmd = 'gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile="%s" "%s" "%s"' % (fDest, rubricPath, fPDF)
+            if skiprubric:
+                cmd = 'mv "%s" "%s"' % (fPDF, fDest)
+            else:
+                cmd = 'gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile="%s" "%s" "%s"' % (fDest, rubricPath, fPDF)
             print("executing:", cmd)
             result = os.system(cmd)
             if not result:
                 print("Complete!", fDest)
-                os.unlink(fPDF)
+                if not skiprubric:
+                    os.unlink(fPDF)
             else:
                 print("Ack")
         else:
