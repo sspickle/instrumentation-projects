@@ -1,5 +1,9 @@
-jupyter
+numpy
+scipy
 matplotlib
 pandas
+jupyter
 pyserial
-scipy
+arviz
+pymc3
+seaborn
