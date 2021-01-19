@@ -103,3 +103,4 @@ ENV/
 *~
 *.lib
 *.bak
+.vscode
