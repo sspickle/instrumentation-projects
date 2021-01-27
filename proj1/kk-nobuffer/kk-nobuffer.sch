@@ -1,0 +1,119 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MCU_Module:Arduino_UNO_R3 A?
+U 1 1 601179BB
+P 2700 2350
+F 0 "A?" H 2700 3531 50  0000 C CNN
+F 1 "Arduino_UNO_R3" H 2700 3440 50  0000 C CNN
+F 2 "Module:Arduino_UNO_R3" H 2700 2350 50  0001 C CIN
+F 3 "https://www.arduino.cc/en/Main/arduinoBoardUno" H 2700 2350 50  0001 C CNN
+	1    2700 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 60119A40
+P 3600 1100
+F 0 "R?" V 3393 1100 50  0000 C CNN
+F 1 "R" V 3484 1100 50  0000 C CNN
+F 2 "" V 3530 1100 50  0001 C CNN
+F 3 "~" H 3600 1100 50  0001 C CNN
+	1    3600 1100
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 6011AC40
+P 4750 1850
+F 0 "R?" H 4820 1896 50  0000 L CNN
+F 1 "R" H 4820 1805 50  0000 L CNN
+F 2 "" V 4680 1850 50  0001 C CNN
+F 3 "~" H 4750 1850 50  0001 C CNN
+	1    4750 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D?
+U 1 1 6011C947
+P 4750 2500
+F 0 "D?" V 4789 2382 50  0000 R CNN
+F 1 "LED" V 4698 2382 50  0000 R CNN
+F 2 "" H 4750 2500 50  0001 C CNN
+F 3 "~" H 4750 2500 50  0001 C CNN
+	1    4750 2500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 6011DC31
+P 4050 2200
+F 0 "C?" H 4165 2246 50  0000 L CNN
+F 1 "C" H 4165 2155 50  0000 L CNN
+F 2 "" H 4088 2050 50  0001 C CNN
+F 3 "~" H 4050 2200 50  0001 C CNN
+	1    4050 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2200 2050 1750 2050
+Wire Wire Line
+	1750 2050 1750 1100
+Wire Wire Line
+	1750 1100 3450 1100
+Wire Wire Line
+	3750 1100 4050 1100
+Wire Wire Line
+	4750 1100 4750 1700
+Wire Wire Line
+	4750 2000 4750 2350
+Wire Wire Line
+	4750 2650 4750 3000
+Wire Wire Line
+	4750 3000 4050 3000
+Wire Wire Line
+	3550 3000 3550 3700
+Wire Wire Line
+	3550 3700 3200 3700
+Wire Wire Line
+	2800 3700 2800 3450
+Wire Wire Line
+	4050 2350 4050 3000
+Connection ~ 4050 3000
+Wire Wire Line
+	4050 3000 3550 3000
+Wire Wire Line
+	4050 2050 4050 1100
+Connection ~ 4050 1100
+Wire Wire Line
+	4050 1100 4750 1100
+$Comp
+L power:GND #PWR?
+U 1 1 601214C9
+P 3200 3800
+F 0 "#PWR?" H 3200 3550 50  0001 C CNN
+F 1 "GND" H 3205 3627 50  0000 C CNN
+F 2 "" H 3200 3800 50  0001 C CNN
+F 3 "" H 3200 3800 50  0001 C CNN
+	1    3200 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3200 3800 3200 3700
+Connection ~ 3200 3700
+Wire Wire Line
+	3200 3700 2800 3700
+$EndSCHEMATC
