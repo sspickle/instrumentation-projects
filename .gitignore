@@ -105,3 +105,4 @@ ENV/
 *.bak
 *-bak
 *-backup
+.vscode
