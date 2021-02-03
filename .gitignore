@@ -103,3 +103,5 @@ ENV/
 *~
 *.lib
 *.bak
+*-bak
+*-backup
