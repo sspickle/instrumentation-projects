@@ -1,21 +1,30 @@
+#define INPUT_PIN 2
+
 volatile long int count = 0L;
 
 void setup()
 {
-  pinMode(13, OUTPUT);
+  pinMode(INPUT_PIN, INPUT);
   Serial.begin(9600);
-  attachInterrupt(digitalPinToInterrupt(2), click, FALLING);
+  attachInterrupt(digitalPinToInterrupt(INPUT_PIN), click, FALLING);
 }
 
 void click() {
   count++;
-  digitalWrite(13, ((count) & 0x01));
+  digitalWrite(LED_BUILTIN,(count & 0x01)); // toggle the LED for each hit
 }
 
 void loop()
 {
-  delay(1000); // Wait for 1000 millisecond(s)
-  Serial.println(count);
-  count=0L;
-}
+  long int copy;   // an interrupt safe copy of the count
 
+  delay(1000);     // Wait for 1000 millisecond(s)
+
+
+  noInterrupts();  // disable interrupts
+  copy = count;    // make a local safe copy
+  count=0L;        // clear the global count
+  interrupts();    // re-enable interrupts
+
+  Serial.println(copy);
+}
