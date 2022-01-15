@@ -8,4 +8,3 @@ pymc3
 pyserial
 scipy
 seaborn
-
