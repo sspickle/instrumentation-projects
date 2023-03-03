@@ -5,6 +5,8 @@ volatile long int count = 0L;
 void setup()
 {
   pinMode(INPUT_PIN, INPUT);
+  pinMode(LED_BUILTIN,OUTPUT);
+
   Serial.begin(9600);
   attachInterrupt(digitalPinToInterrupt(INPUT_PIN), click, FALLING);
 }
