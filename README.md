@@ -1,4 +1,7 @@
 # instrumentation-projects
+
+This repo is no longer used by the course, but I'm keeping it here for historical interest.
+
 A collection of instrumentation projects for PHYS-230. Mostly python, but also Arduino, PSoC etc. Hopefully someone will find this useful!
 
 You can find links to most of the materials [here](README.ipynb).
